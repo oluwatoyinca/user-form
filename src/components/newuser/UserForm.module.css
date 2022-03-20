@@ -1,0 +1,31 @@
+.userform {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+.formdiv {
+    width: 100%;
+}
+
+  .formdiv label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+  }
+  
+  .formdiv input {
+    font: inherit;
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid #edebfc;
+    width: 100%;
+    max-width: 100%;
+    box-shadow: 1px 1px 10px 3px #edebfc;
+  }
+  
+  .actiondiv {
+    text-align: right;
+  }

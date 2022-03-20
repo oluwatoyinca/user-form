@@ -1,10 +1,31 @@
 .App {
   text-align: center;
+  /* background-color: blue; */
+  height: 500px;
+  width: 60%;
+  margin: 0 auto;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+  padding: 1rem 2rem;
+  border: 1px solid #bfb8f0;
+  background-color: #bfb8f0;
+  color: white;
+  /* border-radius: 12px; */
+  margin-left: 1rem;
+}
+
+button:hover,
+button:active {
+  background-color: #062d33;
+  border-color: #062d33;
 }
 
 @media (prefers-reduced-motion: no-preference) {
