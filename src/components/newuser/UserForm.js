@@ -43,7 +43,6 @@ const UserInput = (props) => {
             age: ''
         })
         props.onUserAdd(userData)
-        // console.log('hii')
     }
 
     return (

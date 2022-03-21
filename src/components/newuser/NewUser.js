@@ -1,5 +1,4 @@
 import React from 'react'
-import './NewUser.module.css'
 import UserForm from './UserForm'
 import Card from '../ui/Card'
 
