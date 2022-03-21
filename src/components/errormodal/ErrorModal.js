@@ -9,17 +9,18 @@ const ErrorModal = (props) => {
     }
 
     return (
-        <div className={styles.backdrop} onClick={closeModal}>
+        <div>
+            <div className={styles.backdrop} onClick={closeModal} />
             <Card className={styles.modal}>
-                <div className={styles.header}>
-                    Invalid Input
-                </div>
+                <header className={styles.header}>
+                    <h2>Invalid Input</h2>
+                </header>
                 <div className={styles.content}>
-                    {props.error}
+                    <p>{props.error}</p>
                 </div>
-                <div className={styles.actions}>
+                <footer className={styles.actions}>
                     <Button onClick={closeModal}>Close</Button>
-                </div>
+                </footer>
             </Card>
         </div>
     )

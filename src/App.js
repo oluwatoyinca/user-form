@@ -6,7 +6,7 @@ import ErrorModal from './components/errormodal/ErrorModal';
 
 const App = () => {
   const [users, setUsers] = useState([])
-  const [error, setError] = useState('')
+  const [error, setError] = useState(null)
 
   const addNewUser = (user) => {
     setUsers((prevState) => {return [user, ...prevState]})
@@ -17,17 +17,12 @@ const App = () => {
   }
 
   const modalClose = () => {
-    setError('')
-  }
-
-  let errorContent = ''
-  if(error) {
-    errorContent = <ErrorModal error={error} onModalClose={modalClose} />
+    setError(null)
   }
 
   return (
     <div className="App">
-      {errorContent}
+      {error && <ErrorModal error={error} onModalClose={modalClose} />}
       <NewUser onAddNewUser={addNewUser} onErrorFound={errorFound}/>
       <UserList users={users} />
     </div>

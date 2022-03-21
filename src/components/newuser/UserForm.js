@@ -21,20 +21,20 @@ const UserInput = (props) => {
 
         const userData = ({
             name: user.name.trim(),
-            age: +user.age.trim()
+            age: user.age.trim()
         })
 
         const ifNull = Object.entries(userData).filter(entry => {
-            return !entry[1]
+            return entry[1].length < 1
         })
 
         if(ifNull.length > 0) {
-            props.onError('Both fields must be filled')
+            props.onError('Please make sure to enter both your name and age.')
             return;
         }
         
-        if(userData.age < 1) {
-            props.onError('Age cannot be less than 0')
+        if(+userData.age < 1) {
+            props.onError('Please enter an age greater than 0.')
             return;
         }
 
@@ -50,11 +50,11 @@ const UserInput = (props) => {
         <form onSubmit={formSubmit}>
             <div className={styles.userform}>
                 <div className={styles.formdiv}>
-                    <label htmlFor='name'>Name</label>
+                    <label htmlFor='name'>Name *</label>
                     <input id="name" type="text" value={user.name} onChange={nameChange} />
                 </div>
                 <div className={styles.formdiv}>
-                    <label htmlFor='age'>Age (Years)</label>
+                    <label htmlFor='age'>Age (Years) *</label>
                     <input id="age" type="number" step="1" value={user.age} onChange={ageChange} />
                 </div>
             </div>
