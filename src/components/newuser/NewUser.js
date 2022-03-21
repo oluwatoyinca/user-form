@@ -12,9 +12,13 @@ const NewUser = (props) => {
         props.onAddNewUser(newUser)
     }
 
+    const errorHandler = (error) => {
+        props.onErrorFound(error)
+    }
+
     return (
         <Card>
-            <UserForm onUserAdd={addUser} />
+            <UserForm onUserAdd={addUser} onError={errorHandler} />
         </Card>
     )
 }

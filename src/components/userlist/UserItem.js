@@ -1,11 +1,11 @@
-import React, {useState} from 'react'
+import React from 'react'
 import styles from './UserItem.module.css'
 
 const UserItem = (props) => {
     return (
-        <div className={styles.userItem}>
+        <li className={styles.userItem}>
             {`${props.user.name} (${props.user.age} years old)`}
-        </div>
+        </li>
     )
 }
 

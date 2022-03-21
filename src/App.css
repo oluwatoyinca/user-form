@@ -11,21 +11,12 @@
   pointer-events: none;
 }
 
-button {
-  font: inherit;
-  cursor: pointer;
-  padding: 1rem 2rem;
-  border: 1px solid #bfb8f0;
-  background-color: #bfb8f0;
-  color: white;
-  /* border-radius: 12px; */
-  margin-left: 1rem;
+ul {
+  padding-inline-start: 0px;
 }
 
-button:hover,
-button:active {
-  background-color: #062d33;
-  border-color: #062d33;
+li {
+  list-style: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
